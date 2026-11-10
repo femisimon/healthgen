@@ -2,9 +2,23 @@
 
 HealthGen generates synthetic X12 837P professional claims targeting `005010X222A1`, 837I institutional claims targeting `005010X223A2`, and 837D dental claims targeting `005010X224A2`. The professional fixture represents a depression screening in a primary-care office. The institutional fixture represents the facility claim for a screening at an outpatient hospital. The dental fixture represents a routine adult cleaning at a dental office. Each uses a synthetic adult self-subscriber, a primary payer, and one service line.
 
-## Run locally
+## Quick start
 
-Use Python 3.12 or newer. Clone the repository or download the source archive, then run the following commands from the project directory. The installed package uses only the Python standard library at runtime.
+With Python 3.12 or newer, install [HealthGen from PyPI](https://pypi.org/project/healthgen/) and generate one synthetic 837P professional claim:
+
+```sh
+python -m pip install healthgen
+healthgen generate x12 837p --count 1 --seed 42 --output claims-demo
+healthgen validate --file claims-demo/claims_001.x12
+```
+
+Open `claims-demo/expected.json` to see the fictional patient, provider, payer, service, and charges. Open `claims-demo/claims_001.x12` to see the raw X12 claim. Choose a new output directory when you run the command again.
+
+Use `837i` for an institutional claim or `837d` for a dental claim. The installed package uses only the Python standard library at runtime.
+
+## Run from source
+
+Clone this repository or download the source archive, then run these commands from the project directory.
 
 ```sh
 python -m pip install .
