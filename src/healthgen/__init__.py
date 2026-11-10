@@ -16,7 +16,7 @@ from .scenario import (
 from .validation import validate
 from .x12 import TRANSACTION_GUIDES, controls, serialize
 
-__version__ = "0.1.0.dev5"
+__version__ = "0.1.0"
 __all__ = ["generate", "validate"]
 TRANSACTION_SCENARIOS = {"837p": SCENARIO, "837i": OUTPATIENT_SCENARIO, "837d": DENTAL_SCENARIO}
 

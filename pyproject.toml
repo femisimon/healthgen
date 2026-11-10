@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "healthgen"
-version = "0.1.0.dev5"
+version = "0.1.0"
 description = "Deterministic synthetic X12 professional, institutional, and dental claims"
 readme = "README.md"
 requires-python = ">=3.12"
