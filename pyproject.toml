@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "healthgen"
+version = "0.1.0.dev5"
+description = "Deterministic synthetic X12 professional, institutional, and dental claims"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+[project.urls]
+Repository = "https://github.com/femisimon/healthgen"
+Issues = "https://github.com/femisimon/healthgen/issues"
+
+[project.scripts]
+healthgen = "healthgen.cli:main"
